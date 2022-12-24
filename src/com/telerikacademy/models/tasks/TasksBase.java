@@ -1,6 +1,6 @@
 package com.telerikacademy.models.tasks;
 
-import com.telerikacademy.models.contracts.Task;
+import com.telerikacademy.models.tasks.contracts.Task;
 
 import java.util.ArrayList;
 import java.util.List;
