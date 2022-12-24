@@ -1,7 +1,9 @@
 package com.telerikacademy.models.tasks;
 
-import com.telerikacademy.models.contracts.Bug;
+import com.telerikacademy.models.CommentImpl;
+import com.telerikacademy.models.tasks.contracts.Bug;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.telerikacademy.utils.ValidationHelpers.validateStringLength;
@@ -20,8 +22,16 @@ public class BugImpl extends TasksBase implements Bug {
     public static final String DESCRIPTION_ERROR_MESSAGE = "Description can not have less than %d" +
             "and more than %d symbols";
 
-    public BugImpl(int id, String title, String description, List<String> changesHistory) {
-        super(id, title, description, changesHistory);
+    private static List<CommentImpl> comment;
+
+    public BugImpl(int id, String title, String description) {
+        super(id, title, description);
+        comment = new ArrayList<>();
+    }
+
+    @Override
+    public List<CommentImpl> getComment() {
+        return new ArrayList<>(comment);
     }
 
     @Override
