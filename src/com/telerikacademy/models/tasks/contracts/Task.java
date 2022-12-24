@@ -1,4 +1,4 @@
-package com.telerikacademy.models.contracts;
+package com.telerikacademy.models.tasks.contracts;
 
 import java.util.List;
 
