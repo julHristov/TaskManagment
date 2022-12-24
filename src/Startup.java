@@ -1,5 +1,8 @@
+import com.telerikacademy.core.TaskManagementEngineImpl;
+
 public class Startup {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        TaskManagementEngineImpl engine = new TaskManagementEngineImpl();
+        engine.start();
     }
 }
