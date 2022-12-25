@@ -1,6 +1,10 @@
 package com.telerikacademy.models.tasks;
 
-import com.telerikacademy.models.CommentImpl;
+import com.telerikacademy.models.contracts.Comment;
+import com.telerikacademy.models.contracts.Member;
+import com.telerikacademy.models.enums.Priority;
+import com.telerikacademy.models.enums.Severity;
+import com.telerikacademy.models.enums.Status;
 import com.telerikacademy.models.tasks.contracts.Bug;
 
 import java.util.ArrayList;
@@ -10,48 +14,62 @@ import static com.telerikacademy.utils.ValidationHelpers.validateStringLength;
 import static java.lang.String.format;
 
 public class BugImpl extends TasksBase implements Bug {
-    public static final int TITLE_MIN_LENGTH = 10;
-    public static final int TITLE_MAX_LENGTH = 50;
 
-    public static final int DESCRIPTION_MIN_LENGTH = 10;
-    public static final int DESCRIPTION_MAX_LENGTH = 500;
+    private Priority priority;
+    private Severity severity;
+    private List<String> steps;
+    private Member assignee;
+    private Status status;
 
-    public static final String TITLE_ERROR_MESSAGE = "Title can not have less than %d " +
-            "and more than %d symbols";
-
-    public static final String DESCRIPTION_ERROR_MESSAGE = "Description can not have less than %d" +
-            "and more than %d symbols";
-
-    private static List<CommentImpl> comment;
-
-    public BugImpl(int id, String title, String description) {
+    public BugImpl(int id, String title, String description, Priority priority,
+                   Severity severity, Member assignee, List<String> steps) {
         super(id, title, description);
-        comment = new ArrayList<>();
+        this.priority = priority;
+        this.steps = new ArrayList<>();
+        this.assignee = assignee;
+        this.status = Status.ACTIVE;
     }
 
     @Override
-    public List<CommentImpl> getComment() {
-        return new ArrayList<>(comment);
+    public Status getStatus() {
+        return status;
     }
 
     @Override
-    protected void validateTitle(String title) {
-        validateStringLength(title,
-                TITLE_MIN_LENGTH,
-                TITLE_MAX_LENGTH,
-                format(TITLE_ERROR_MESSAGE,
-                        TITLE_MIN_LENGTH,
-                        TITLE_MAX_LENGTH));
+    public List<Comment> getComment() {
+        return new ArrayList<>();
     }
 
     @Override
-    protected void validateDescription(String description) {
-        validateStringLength(description,
-                DESCRIPTION_MIN_LENGTH,
-                DESCRIPTION_MAX_LENGTH,
-                format(DESCRIPTION_ERROR_MESSAGE,
-                        DESCRIPTION_MIN_LENGTH,
-                        DESCRIPTION_MAX_LENGTH));
+    public List<String> getListOfSteps() {
+        return new ArrayList<>();
+    }
+
+    @Override
+    public Priority getPriority() {
+        return priority;
+    }
+
+    @Override
+    public Severity getSeverity() {
+        return severity;
+    }
+
+    @Override
+    public String getAssignee() {
+        return assignee;
+    }
+
+    @Override
+    public void changePriority() {
+    }
+
+    @Override
+    public void changeSeverity() {
+    }
+
+    @Override
+    public void changeStatus() {
     }
 }
 
