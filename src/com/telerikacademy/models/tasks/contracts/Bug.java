@@ -1,6 +1,6 @@
 package com.telerikacademy.models.tasks.contracts;
 
-import com.telerikacademy.models.CommentImpl;
+import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Severity;
 
@@ -13,6 +13,6 @@ public interface Bug {
     void changePriority();
     void changeSeverity();
     void changeStatus();
-    String getAssignee();
+    Member getAssignee();
 
 }

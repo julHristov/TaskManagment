@@ -1,10 +1,7 @@
 package com.telerikacademy.models.tasks;
 
 import com.telerikacademy.models.contracts.Comment;
-import com.telerikacademy.models.enums.Priority;
-import com.telerikacademy.models.enums.Status;
 import com.telerikacademy.models.tasks.contracts.Task;
-import com.telerikacademy.utils.ValidationHelpers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +16,6 @@ public abstract class TasksBase implements Task {
     public static final int DESCRIPTION_MIN_LENGTH = 10;
     public static final int DESCRIPTION_MAX_LENGTH = 500;
 
-    public static final int ASSIGNEE_MIN_LENGTH = 5;
-    public static final int ASSIGNEE_MAX_LENGTH = 20;
-    public static final String ASSIGNEE_ERROR_MESSAGE = "Assignee name can not be less than %d" +
-            "and more than %d symbols";
     public static final String TITLE_ERROR_MESSAGE = "Title can not have less than %d " +
             "and more than %d symbols";
 

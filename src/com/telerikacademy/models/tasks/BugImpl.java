@@ -56,7 +56,7 @@ public class BugImpl extends TasksBase implements Bug {
     }
 
     @Override
-    public String getAssignee() {
+    public Member getAssignee() {
         return assignee;
     }
 
