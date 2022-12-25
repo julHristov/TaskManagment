@@ -16,7 +16,7 @@ public class BoardImpl implements Board {
     private List<String> activity;
 
     public BoardImpl(String name, List<Task> tasks, List<String> activity) {
-        this.name = name;
+        setName(name);
         this.tasks = new ArrayList<>();
         this.activity = new ArrayList<>();
     }
