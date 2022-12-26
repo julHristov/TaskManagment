@@ -1,7 +1,7 @@
 package com.telerikacademy.commands;
 
 import com.telerikacademy.commands.contracts.Command;
-import com.telerikacademy.core.contracts.TaskManagementRepository;
+import com.telerikacademy.core.TaskRepoImpl;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Severity;
 
@@ -17,8 +17,8 @@ public class CreateBugImplCommand implements Command {
     private static final String TASK_ALREADY_EXISTS = "Task with title %s already exists";
     private static final String TASK_CREATED = "%s with title %s was created";
 
-    private final TaskManagementRepository repository;
-    public CreateBugImplCommand(TaskManagementRepository repository) {
+    private final TaskRepoImpl repository;
+    public CreateBugImplCommand(TaskRepoImpl repository) {
         this.repository = repository;
     }
 
