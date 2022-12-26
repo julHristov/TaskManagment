@@ -19,11 +19,10 @@ public class BugImpl extends TasksBase implements Bug {
     private Status status;
 
     public BugImpl(int id, String title, String description, Priority priority,
-                   Severity severity, Member assignee, List<String> steps) {
+                   Severity severity, List<String> steps) {
         super(id, title, description);
         this.priority = priority;
         this.steps = new ArrayList<>();
-        this.assignee = assignee;
         this.status = Status.ACTIVE;
     }
 
