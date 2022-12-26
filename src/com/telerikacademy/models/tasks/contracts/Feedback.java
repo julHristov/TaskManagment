@@ -9,4 +9,6 @@ public interface Feedback {
     Status getStatus();
 
     Member getAssignee();
+
+    void changeStatus(Status newStatus);
 }

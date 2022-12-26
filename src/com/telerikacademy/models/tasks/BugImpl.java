@@ -10,9 +10,6 @@ import com.telerikacademy.models.tasks.contracts.Bug;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.telerikacademy.utils.ValidationHelpers.validateStringLength;
-import static java.lang.String.format;
-
 public class BugImpl extends TasksBase implements Bug {
 
     private Priority priority;
