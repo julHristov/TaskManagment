@@ -68,5 +68,27 @@ public class BugImpl extends TasksBase implements Bug {
     @Override
     public void changeStatus() {
     }
+
+    @Override
+    public String toString() {
+        return "BugImpl: %s\n" + super.toString() +
+                "Priority - \n" + priority +
+                "Severity - \n" + severity +
+                "Steps - \n" + steps +
+                "Assignee - \n" + assignee +
+                "Status - \n" + status  ;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        BugImpl bug = (BugImpl) obj;
+        return getTitle().equals(bug.getTitle()) &&
+                getDescription().equals(bug.getDescription()) &&
+                getPriority().equals(bug.getPriority()) && getSeverity().equals(bug.getSeverity())
+                && getStatus().equals(bug.getStatus());
+    }
 }
 

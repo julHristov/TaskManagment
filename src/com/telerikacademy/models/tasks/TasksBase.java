@@ -102,4 +102,13 @@ public abstract class TasksBase implements Task {
     public void addActivity(String message) {
         changesHistory.add(message);
     }
+
+    @Override
+    public String toString() {
+        return "ID - \n" + id +
+                "Title - \n" + title +
+                "Description - \n" + description +
+                "ChangesHistory - \n" + changesHistory +
+                "Comments - \n" + comments;
+    }
 }

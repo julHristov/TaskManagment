@@ -9,7 +9,7 @@ import com.telerikacademy.models.tasks.contracts.Feedback;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.lang.String.*;
+import static java.lang.String.format;
 
 public class FeedbackImpl extends TasksBase implements Feedback {
     private int rating;
@@ -23,7 +23,7 @@ public class FeedbackImpl extends TasksBase implements Feedback {
     }
 
     public void setRating(int rating) {
-        if(rating < 0){
+        if (rating < 0) {
             throw new IllegalArgumentException("Rating can not be negative");
         }
         this.rating = rating;
@@ -54,10 +54,10 @@ public class FeedbackImpl extends TasksBase implements Feedback {
         List<Status> statusList = Arrays.asList(Status.UNSCHEDULED, Status.SCHEDULED, Status.DONE);
         Status currentStatus = getStatus();
 
-        if(!statusList.contains(newStatus)){
+        if (!statusList.contains(newStatus)) {
             throw new IllegalReceiveException("Invalid status");
         }
-        if(currentStatus.equals(newStatus)){
+        if (currentStatus.equals(newStatus)) {
             throw new IllegalArgumentException("Status already exists");
         }
         this.status = newStatus;
@@ -69,20 +69,26 @@ public class FeedbackImpl extends TasksBase implements Feedback {
 
     @Override
     public String toString() {
-        return format("Feedback: \n" +
-                "Rating - \n" +
-                "Status - \n" +
-                "Assignee - \n",
+        return format("""
+                        %sFeedback:\s
+                        Rating -\s
+                        Status -\s
+                        Assignee -\s
+                        """,
+                super.toString(),
                 rating,
                 status,
                 assignee);
     }
+
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null || getClass() != obj.getClass())
+        }
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
+        }
         FeedbackImpl feedback = (FeedbackImpl) obj;
         return getTitle().equals(feedback.getTitle()) &&
                 getDescription().equals(feedback.getDescription()) &&
