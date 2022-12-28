@@ -3,7 +3,6 @@ package com.telerikacademy.core;
 import com.telerikacademy.commands.contracts.Command;
 import com.telerikacademy.core.contracts.CommandFactory;
 import com.telerikacademy.core.contracts.Engine;
-import com.telerikacademy.core.contracts.TaskRepo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ public class TaskManagementEngineImpl implements Engine {
     private static final String SEPARATOR = "################";
     public static final String ERROR_MESSAGE = "Command cannot be empty!";
     private final CommandFactory commandFactory;
-    private final TaskRepo taskRepo;
+    private final TaskRepoImpl taskRepo;
 
 
     public TaskManagementEngineImpl() {

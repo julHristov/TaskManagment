@@ -21,7 +21,7 @@ public abstract class TasksBase implements Task {
 
     public static final String DESCRIPTION_ERROR_MESSAGE = "Description can not have less than %d" +
             "and more than %d symbols";
-    private int id;
+    private static int id;
     private String title;
     private String description;
     private final List<String> changesHistory;
