@@ -1,4 +1,4 @@
 package com.telerikacademy.commands;
 
-public class AddCommentToTaskCommand {
+public class AssigneeTaskToPerson {
 }

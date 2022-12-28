@@ -1,4 +1,4 @@
-package com.telerikacademy.commands;
+package com.telerikacademy.commands.create;
 
 import com.telerikacademy.commands.contracts.Command;
 import com.telerikacademy.core.TaskRepoImpl;
@@ -41,4 +41,5 @@ public class CreateBugImplCommand implements Command {
         repository.createTask(id, title, description, priority, severity, steps);
         return String.format(TASK_CREATED, "Bug", title);
     }
+
 }

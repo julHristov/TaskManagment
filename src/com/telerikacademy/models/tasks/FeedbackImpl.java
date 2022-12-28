@@ -67,19 +67,19 @@ public class FeedbackImpl extends TasksBase implements Feedback {
                 this.status));
     }
 
-    @Override
-    public String toString() {
-        return format("""
-                        %sFeedback:\s
-                        Rating -\s
-                        Status -\s
-                        Assignee -\s
-                        """,
-                super.toString(),
-                rating,
-                status,
-                assignee);
-    }
+//    @Override
+//    public String toString() {
+//        return format("""
+//                        %sFeedback:\s
+//                        Rating -\s
+//                        Status -\s
+//                        Assignee -\s
+//                        """,
+//                super.toString(),
+//                rating,
+//                status,
+//                assignee);
+//    }
 
     @Override
     public boolean equals(Object obj) {
