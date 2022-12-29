@@ -1,7 +1,7 @@
 package com.telerikacademy.commands.enums;
 
 public enum CommandType {
-    CREATETASK,
+    CREATEBUG,
     CREATESTORYINBOARD,
     CREATEFEEDBACK,
     CREATEPERSON,

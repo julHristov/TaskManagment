@@ -15,7 +15,7 @@ public class CommandFactoryImpl implements CommandFactory {
                     String.format(INVALID_COMMAND, commandTypeAsString));
            //TODO THIS SHIT !
             switch (commandType){
-                case CREATETASK:
+                case CREATEBUG:
                     return new CreateBugImplCommand(taskRepo);
                 case CREATEFEEDBACK:
                     return null;

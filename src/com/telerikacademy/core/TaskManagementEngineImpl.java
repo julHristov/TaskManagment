@@ -61,11 +61,11 @@ public class TaskManagementEngineImpl implements Engine {
  //createtask:
  //filter: The bears are cool
     private String extractCommandName(String inputLine) {
-        return inputLine.split(": ")[0];
+        return inputLine.split(" / ")[0];
     }
 
     private List<String> extractCommandParameters(String inputLine) {
-        String[] commandParts = inputLine.split(" ");
+        String[] commandParts = inputLine.split(" / ");
         ArrayList<String> parameters = new ArrayList<>();
         for (int i = 1; i < commandParts.length; i++) {
             parameters.add(commandParts[i]);

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskRepoImpl implements TaskRepo {
-  public static int id;
+  public static int nextId;
 
   private final List<Task> tasks;
 
@@ -39,9 +39,9 @@ public class TaskRepoImpl implements TaskRepo {
     return new ArrayList<>(members);
   }
   @Override
-  public void createTask(int id, String taskTitle, String description, Priority priority,
+  public void createBug(int id, String taskTitle, String description, Priority priority,
                          Severity severity, List<String> steps) {
-    Task task = new BugImpl(++id, taskTitle, description, priority, severity, steps);
+    Task task = new BugImpl(++nextId, taskTitle, description, priority, severity, steps);
     this.tasks.add(task);
   }
 
