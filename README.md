@@ -1,6 +1,6 @@
 # Task Management System
 Commands:
-CreateBug / Bug On Board / The Bug is doing something wrong / High / Critical / Do one, Do two, Do three
+CreateBug / Program freezes when the Log In button is clicked / This needs to be fixed quickly! / High / Critical / 1. Open the application; 2. Click "Log In"; 3. The application freezes!
 
 
 ## Getting started
