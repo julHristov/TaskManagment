@@ -55,7 +55,11 @@ public class MemberImpl implements Member {
 
     @Override
     public void removeTask(Task task) {
-
+        if(!listOfTask.contains(task)){
+            throw new IllegalArgumentException(String.format("Task %s is not in the list", task.getTitle()));
+        }
+        listOfTask.remove(task);
+        addActivity(String.format("Task %s was removed from list", task.getTitle()));
     }
 
     @Override
