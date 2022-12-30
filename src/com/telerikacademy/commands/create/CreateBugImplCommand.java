@@ -26,12 +26,12 @@ public class CreateBugImplCommand implements Command {
     @Override
     public String excecute(List<String> arguments) {
         validateArgumentsCount(arguments, EXPECTED_NUMBER_OF_ARGUMENTS);
-        int id = TaskRepoImpl.nextId;
+        int id = ++TaskRepoImpl.nextId;
         String title = arguments.get(0);
         String description = arguments.get(1);
         Priority priority = tryParsePriority(arguments.get(2).toUpperCase());
         Severity severity = tryParseSeverity(arguments.get(3).toUpperCase());
-        List<String> steps = Arrays.asList(arguments.get(4).split(","));
+        List<String> steps = Arrays.asList(arguments.get(4).split("; "));
         return createBug(id, title, description, priority, severity, steps);
     }
 

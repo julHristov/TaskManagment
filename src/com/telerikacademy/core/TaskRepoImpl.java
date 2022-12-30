@@ -56,4 +56,9 @@ public class TaskRepoImpl implements TaskRepo {
     }
     return exists;
   }
+
+  @Override
+  public void addBug(BugImpl bugToAdd) {
+
+  }
 }

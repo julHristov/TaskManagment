@@ -9,5 +9,8 @@ public interface Member {
     String getName();
     List<Task> getTask();
     List<String> getActivity();
+    void addTask(Task task);
+    void removeTask(Task task);
+    void addActivity(String message);
 
 }
