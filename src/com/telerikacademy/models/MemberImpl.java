@@ -33,7 +33,6 @@ public class MemberImpl implements Member {
         return name;
     }
 
-
     @Override
     public List<Task> getTask() {
         return new ArrayList<>(listOfTask);

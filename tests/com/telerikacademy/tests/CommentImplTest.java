@@ -1,5 +1,6 @@
-package com.telerikacademy.models;
+package com.telerikacademy.tests;
 
+import com.telerikacademy.models.CommentImpl;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
