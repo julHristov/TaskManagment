@@ -31,25 +31,70 @@ class BugImplTest {
     }
 
     @Test
-    public void change_Status_Should_Throw_Exception_When_Equals() {
+    public void change_Status_Should_Throw_Exception_When_Equals_To_Initial() {
         setup();
         Status status = Status.ACTIVE;
         assertEquals(status, bug.getStatus());
     }
 
     @Test
-    public void change_Status_Should_NotThrow_Exception() {
+    public void change_Status_Should_Change_When_Not_Equal_To_Initial() {
         setup();
-        Status status = Status.NEW;
-        assertNotEquals(status, bug.getStatus());
+        Status newStatus = Status.NEW;
+        bug.changeStatus(newStatus);
+        assertEquals(newStatus, bug.getStatus());
     }
 
-    //    @Test
-//    public void change_Status_Should_Add_Activity(){
-//        setup();
-//        Status status = Status.NEW;
-//        assertNotEquals(status, bug.getStatus());
-//    }
+    @Test
+    public void priority_Should_Change_When_Not_Equal_To_Initial(){
+        setup();
+        Priority priority = Priority.LOW;
+        bug.changePriority(priority);
+        assertEquals(priority, bug.getPriority());
+    }
+
+    @Test
+    public void change_Priority_Should_Throw_Exception_When_Equals_To_Initial() {
+        setup();
+        Priority priority = Priority.HIGH;
+        assertEquals(priority, bug.getPriority());
+    }
+
+    @Test
+    public void changeSeverity_Should_Throw_Exception_When_Equals_To_Initial(){
+        setup();
+        Severity severity = Severity.CRITICAL;
+        bug.changeSeverity(severity);
+        assertEquals(severity, bug.getSeverity());
+    }
+    @Test
+    public void changeSeverity_Should_Change_When_Not_Equal_To_Initial(){
+        setup();
+        Severity severity = Severity.MAJOR;
+        bug.changeSeverity(severity);
+        assertEquals(severity, bug.getSeverity());
+    }
+
+    @Test
+    public void change_Status_Should_Add_Activity(){
+        setup();
+        bug.changeStatus(Status.NEW);
+        assertNotEquals(1, bug.getListOfSteps().size());
+    }
+
+    @Test
+    public void change_Severity_Should_Add_Activity(){
+        setup();
+        bug.changeSeverity(Severity.MAJOR);
+        assertNotEquals(1, bug.getListOfSteps().size());
+    }
+
+    @Test
+    public void change_Priority_Should_Add_Activity(){
+        setup();
+        bug.changePriority(Priority.LOW);
+        assertNotEquals(1, bug.getListOfSteps().size());
+    }
     @Test
     void validateDescription() {
         setup();
@@ -70,7 +115,27 @@ class BugImplTest {
     @Test
     void constructor_Should_Throw_Exception_When_Description_Length_Above_Max() {
         setup();
-        String test = "Invalid".repeat(500);
+        String test = "Invalid".repeat(72);
+        try {
+            bug.setDescription(test);
+        } catch (IllegalArgumentException e) {
+
+        }
+    }
+    @Test
+    void constructor_Should_Throw_Exception_When_Title_Length_Below_Min() {
+        setup();
+        try {
+            bug.setDescription("Invalid");
+        } catch (IllegalArgumentException e) {
+
+        }
+    }
+
+    @Test
+    void constructor_Should_Throw_Exception_When_Title_Length_Above_Max() {
+        setup();
+        String test = "Invalid".repeat(8);
         try {
             bug.setDescription(test);
         } catch (IllegalArgumentException e) {

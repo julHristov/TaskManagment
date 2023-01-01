@@ -60,10 +60,22 @@ public class BugImpl extends TasksBase implements Bug {
 
     @Override
     public void changePriority(Priority priority) {
+        if(this.priority == priority){
+            throw new IllegalArgumentException(format("The priority is already set to %s",
+                    this.priority.toString()));
+        }
+        this.priority = priority;
+        steps.add(format("Priority changed to %s", priority.toString()));
     }
 
     @Override
     public void changeSeverity(Severity severity) {
+        if(this.severity == severity){
+            throw new IllegalArgumentException(format("The severity is already set to %s",
+                    this.severity.toString()));
+        }
+        this.severity = severity;
+        steps.add(format("Severity changed to %s", this.severity.toString()));
     }
 
     @Override
