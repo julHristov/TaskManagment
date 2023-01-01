@@ -1,6 +1,7 @@
 package com.telerikacademy.core;
 
 import com.telerikacademy.core.contracts.TaskRepo;
+import com.telerikacademy.models.TeamImpl;
 import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
@@ -16,7 +17,7 @@ public class TaskRepoImpl implements TaskRepo {
 
   private final List<Task> tasks;
 
-  private final   List<Team> teams ;
+  private final List<Team> teams ;
   private final List<Member> members;
 
   public TaskRepoImpl() {
@@ -60,5 +61,10 @@ public class TaskRepoImpl implements TaskRepo {
   @Override
   public void addBug(BugImpl bugToAdd) {
 
+  }
+
+  @Override
+  public void addTeam(TeamImpl teamToAdd) {
+//    teams.add(new TeamImpl(name));
   }
 }

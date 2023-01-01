@@ -1,5 +1,6 @@
 package com.telerikacademy.core.contracts;
 
+import com.telerikacademy.models.TeamImpl;
 import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
@@ -20,6 +21,7 @@ public interface TaskRepo {
     boolean taskExists(String taskName);
 
     void addBug(BugImpl bugToAdd);
+    void addTeam(TeamImpl teamToAdd);
 
 
 
