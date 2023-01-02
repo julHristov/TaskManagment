@@ -7,6 +7,7 @@ import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Severity;
 import com.telerikacademy.models.tasks.BugImpl;
+import com.telerikacademy.models.tasks.FeedbackImpl;
 import com.telerikacademy.models.tasks.contracts.Task;
 
 import java.util.ArrayList;
@@ -66,5 +67,10 @@ public class TaskRepoImpl implements TaskRepo {
   @Override
   public void addTeam(TeamImpl teamToAdd) {
 //    teams.add(new TeamImpl(name));
+  }
+
+  @Override
+  public void addFeedback(FeedbackImpl feedbackToAdd) {
+
   }
 }

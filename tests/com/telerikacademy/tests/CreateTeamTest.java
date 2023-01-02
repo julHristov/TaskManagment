@@ -1,5 +1,7 @@
 package com.telerikacademy.tests;
 
+import com.telerikacademy.commands.create.CreateTeam;
+import com.telerikacademy.core.TaskRepoImpl;
 import com.telerikacademy.models.TeamImpl;
 import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.tasks.BugImpl;
@@ -10,21 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CreateTeamTest {
 
     private static TeamImpl team;
 
-    @BeforeEach
-    public void setUp(){
-        team = new TeamImpl("The Eagles");
-    }
 
     @Test
     public void excecute() {
-        fail("Not implemented yet");
-    }
-    public void createTeam_Should_Return_Message(){
         fail("Not implemented yet");
     }
 }

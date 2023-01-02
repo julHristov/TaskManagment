@@ -6,6 +6,7 @@ import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Severity;
 import com.telerikacademy.models.tasks.BugImpl;
+import com.telerikacademy.models.tasks.FeedbackImpl;
 import com.telerikacademy.models.tasks.contracts.Task;
 
 import java.util.List;
@@ -22,6 +23,8 @@ public interface TaskRepo {
 
     void addBug(BugImpl bugToAdd);
     void addTeam(TeamImpl teamToAdd);
+
+    void addFeedback(FeedbackImpl feedbackToAdd);
 
 
 
