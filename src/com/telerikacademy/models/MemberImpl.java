@@ -33,8 +33,6 @@ public class MemberImpl implements Member {
         return name;
     }
 
-
-
     @Override
     public List<Task> getTask() {
         return new ArrayList<>(listOfTask);
@@ -43,5 +41,28 @@ public class MemberImpl implements Member {
     @Override
     public List<String> getActivity() {
         return new ArrayList<>(activity);
+    }
+
+    @Override
+    public void addTask(Task task) {
+        if(listOfTask.contains(task)){
+            throw new IllegalArgumentException("Task has already been assigned");
+        }
+        listOfTask.add(task);
+        addActivity(String.format("Task with ID %d is assigned", task.getId()));
+    }
+
+    @Override
+    public void removeTask(Task task) {
+        if(!listOfTask.contains(task)){
+            throw new IllegalArgumentException(String.format("Task %s is not in the list", task.getTitle()));
+        }
+        listOfTask.remove(task);
+        addActivity(String.format("Task %s was removed from list", task.getTitle()));
+    }
+
+    @Override
+    public void addActivity(String message) {
+        activity.add(message);
     }
 }

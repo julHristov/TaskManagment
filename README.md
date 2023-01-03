@@ -1,5 +1,9 @@
 # Task Management System
+Commands:
 
+CreateBug / Program freezes when the Log In button is clicked / This needs to be fixed quickly! / High / Critical / 1. Open the application; 2. Click "Log In"; 3. The application freezes!
+
+CreateTeam / The Eagles
 
 
 ## Getting started

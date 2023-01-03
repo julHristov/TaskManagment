@@ -1,22 +1,24 @@
 package com.telerikacademy.core;
 
 import com.telerikacademy.core.contracts.TaskRepo;
+import com.telerikacademy.models.TeamImpl;
 import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Severity;
 import com.telerikacademy.models.tasks.BugImpl;
+import com.telerikacademy.models.tasks.FeedbackImpl;
 import com.telerikacademy.models.tasks.contracts.Task;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TaskRepoImpl implements TaskRepo {
-  public static int id;
+  public static int nextId;
 
   private final List<Task> tasks;
 
-  private final   List<Team> teams ;
+  private final List<Team> teams ;
   private final List<Member> members;
 
   public TaskRepoImpl() {
@@ -39,9 +41,9 @@ public class TaskRepoImpl implements TaskRepo {
     return new ArrayList<>(members);
   }
   @Override
-  public void createTask(int id, String taskTitle, String description, Priority priority,
+  public void createBug(int id, String taskTitle, String description, Priority priority,
                          Severity severity, List<String> steps) {
-    Task task = new BugImpl(++id, taskTitle, description, priority, severity, steps);
+    Task task = new BugImpl(++nextId, taskTitle, description, priority, severity, steps);
     this.tasks.add(task);
   }
 
@@ -55,5 +57,20 @@ public class TaskRepoImpl implements TaskRepo {
       }
     }
     return exists;
+  }
+
+  @Override
+  public void addBug(BugImpl bugToAdd) {
+
+  }
+
+  @Override
+  public void addTeam(TeamImpl teamToAdd) {
+//    teams.add(new TeamImpl(name));
+  }
+
+  @Override
+  public void addFeedback(FeedbackImpl feedbackToAdd) {
+
   }
 }

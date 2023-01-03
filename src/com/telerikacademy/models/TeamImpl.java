@@ -17,7 +17,7 @@ public class TeamImpl implements Team {
     private final List<Member> members ;
      private final List<Board> boards;
 
-    public TeamImpl(String name, List<Member> members, List<Board> boards) {
+    public TeamImpl(String name) {
         setName(name);
         this.members = new ArrayList<>();
         this.boards = new ArrayList<>();

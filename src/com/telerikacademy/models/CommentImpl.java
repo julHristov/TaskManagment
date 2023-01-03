@@ -1,8 +1,6 @@
 package com.telerikacademy.models;
 
 import com.telerikacademy.models.contracts.Comment;
-import com.telerikacademy.utils.ValidationHelpers;
-
 import static com.telerikacademy.utils.ValidationHelpers.*;
 import static java.lang.String.*;
 

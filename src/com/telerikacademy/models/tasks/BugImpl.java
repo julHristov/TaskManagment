@@ -10,6 +10,8 @@ import com.telerikacademy.models.tasks.contracts.Bug;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.String.*;
+
 public class BugImpl extends TasksBase implements Bug {
 
     private Priority priority;
@@ -57,15 +59,32 @@ public class BugImpl extends TasksBase implements Bug {
     }
 
     @Override
-    public void changePriority() {
+    public void changePriority(Priority priority) {
+        if(this.priority == priority){
+            throw new IllegalArgumentException(format("The priority is already set to %s",
+                    this.priority.toString()));
+        }
+        this.priority = priority;
+        steps.add(format("Priority changed to %s", priority.toString()));
     }
 
     @Override
-    public void changeSeverity() {
+    public void changeSeverity(Severity severity) {
+        if(this.severity == severity){
+            throw new IllegalArgumentException(format("The severity is already set to %s",
+                    this.severity.toString()));
+        }
+        this.severity = severity;
+        steps.add(format("Severity changed to %s", this.severity.toString()));
     }
 
     @Override
-    public void changeStatus() {
+    public void changeStatus(Status status) {
+        if(this.status == status){
+            throw new IllegalArgumentException(format("The status is already set to %s", this.status.toString()));
+        }
+        this.status = status;
+        steps.add(format("Status changed to %s", getStatus().toString()));
     }
 
     @Override
