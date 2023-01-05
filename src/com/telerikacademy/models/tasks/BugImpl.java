@@ -5,6 +5,7 @@ import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Severity;
 import com.telerikacademy.models.enums.Status;
+import com.telerikacademy.models.enums.TaskType;
 import com.telerikacademy.models.tasks.contracts.Bug;
 
 import java.util.ArrayList;
@@ -56,6 +57,11 @@ public class BugImpl extends TasksBase implements Bug {
     @Override
     public Member getAssignee() {
         return assignee;
+    }
+
+    @Override
+    public TaskType getType() {
+        return TaskType.BUG;
     }
 
     @Override

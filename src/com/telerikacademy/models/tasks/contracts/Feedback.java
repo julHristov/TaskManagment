@@ -2,8 +2,9 @@ package com.telerikacademy.models.tasks.contracts;
 
 import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.enums.Status;
+import com.telerikacademy.models.enums.TaskType;
 
-public interface Feedback {
+public interface Feedback extends Task{
     int getRating();
 
     Status getStatus();
@@ -11,4 +12,6 @@ public interface Feedback {
     Member getAssignee();
 
     void changeStatus(Status newStatus);
+
+    public TaskType getType();
 }

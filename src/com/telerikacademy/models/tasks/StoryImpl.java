@@ -5,6 +5,7 @@ import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.enums.Priority;
 import com.telerikacademy.models.enums.Size;
 import com.telerikacademy.models.enums.Status;
+import com.telerikacademy.models.enums.TaskType;
 import com.telerikacademy.models.tasks.contracts.Story;
 
 import java.util.ArrayList;
@@ -53,5 +54,10 @@ public class StoryImpl extends TasksBase implements Story {
         if (currentPriority.equals(newPriority)) {
             throw new IllegalArgumentException(format("Priority is already at %s", getPriority()));
         }
+    }
+
+    @Override
+    public TaskType getType() {
+        return TaskType.STORY;
     }
 }
