@@ -1,0 +1,80 @@
+Index: tests/com/telerikacademy/tests/TestUtilities.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/com/telerikacademy/tests/TestUtilities.java b/tests/com/telerikacademy/tests/TestUtilities.java
+new file mode 100644
+--- /dev/null	(date 1672686629335)
++++ b/tests/com/telerikacademy/tests/TestUtilities.java	(date 1672686629335)
+@@ -0,0 +1,25 @@
++package com.telerikacademy.tests;
++
++import java.util.List;
++
++import static java.util.Arrays.asList;
++
++public class TestUtilities {
++    public static String getString(int size) {
++        return "x".repeat(size);
++    }
++
++    /**
++     * Returns a new List with size equal to wantedSize.
++     * Useful when you do not care what the contents of the List are,
++     * for example when testing if a list of a command throws exception
++     * when it's parameters list's size is less/more than expected.
++     *
++     * @param size the size of the List to be returned.
++     * @return a new List with size equal to wantedSize
++     */
++    public static List<String> getList(int size) {
++        return asList(new String[size]);
++    }
++
++}
+Index: tests/com/telerikacademy/tests/CreateFeedbackTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/com/telerikacademy/tests/CreateFeedbackTest.java b/tests/com/telerikacademy/tests/CreateFeedbackTest.java
+new file mode 100644
+--- /dev/null	(date 1672687303265)
++++ b/tests/com/telerikacademy/tests/CreateFeedbackTest.java	(date 1672687303265)
+@@ -0,0 +1,34 @@
++package com.telerikacademy.tests;
++
++import com.telerikacademy.commands.contracts.Command;
++import com.telerikacademy.commands.create.CreateFeedback;
++import com.telerikacademy.core.TaskRepoImpl;
++import com.telerikacademy.models.contracts.Board;
++import com.telerikacademy.models.contracts.Team;
++import org.junit.Test;
++import org.junit.jupiter.api.BeforeEach;
++
++import java.util.List;
++
++import static com.telerikacademy.tests.TestUtilities.getList;
++import static org.junit.Assert.*;
++
++public class CreateFeedbackTest {
++
++    public static final int EXPECTED_NUMBER_OF_ARGS = 3;
++    private Command command;
++    private TaskRepoImpl repository;
++    private Team team;
++    private Board board;
++
++    @BeforeEach
++    public void setup(){
++        repository = new TaskRepoImpl();
++        command = new CreateFeedback(repository);
++    }
++    @Test
++    public void execute_Should_Throw_Exception_When_Arguments_Are_Less() {
++        List<String> list = getList(EXPECTED_NUMBER_OF_ARGS - 1);
++        assertThrows(IllegalArgumentException.class, () -> command.excecute(list));
++    }
++}
+\ No newline at end of file

@@ -16,7 +16,7 @@ public class MemberImpl implements Member {
     private final List<Task> listOfTask;
     private final List<String> activity;
 
-    public MemberImpl(String name, List<Task> listOfTask, List<String> activity) {
+    public MemberImpl(String name) {
         setName(name);
         this.listOfTask = new ArrayList<>();
         this.activity = new ArrayList<>();

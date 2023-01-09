@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0adbab6-ad9d-408f-add0-a29f815e0bef" name="Changes" comment="TestUtilities class and additions to BoardImplTest">
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/commands/create/CreateBoardInTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/commands/create/CreateBoardInTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/commands/create/CreatePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/commands/create/CreatePerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/core/CommandFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/core/CommandFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/core/TaskRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/core/TaskRepoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/core/contracts/TaskRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/core/contracts/TaskRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/models/MemberImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/models/MemberImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/models/TeamImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/models/TeamImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/telerikacademy/models/contracts/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/telerikacademy/models/contracts/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/com/telerikacademy/tests/BoardImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/telerikacademy/tests/BoardImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/com/telerikacademy/tests/BugImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/telerikacademy/tests/BugImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/com/telerikacademy/tests/utils/TestUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/telerikacademy/tests/utils/TestUtilities.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JadqLa7wm4LqsRXciBrGZbYPjv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/yulian/Documents/code/JAVA/TELERIK/WorkShops/TaskManagment/tests/com/telerikacademy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/yulian/Documents/code/JAVA/TELERIK/WorkShops/02. OOP/Workshops/04. Furniture&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.telerikacademy.tests.utils" />
+      <recent name="com.telerikacademy.tests" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.telerikacademy.tests" />
+      <recent name="com.telerikacademy.models.tasks" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Startup">
+    <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Startup" />
+      <module name="TaskManager" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.telerikacademy.tests.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.telerikacademy.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.telerikacademy.tests.BoardImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardImplTest.addBug_ShouldThrow_Exception_When_Bug_Is_In_The_List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.telerikacademy.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.telerikacademy.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.telerikacademy.tests.BoardImplTest" />
+      <option name="METHOD_NAME" value="addBug_ShouldThrow_Exception_When_Bug_Is_In_The_List" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardImplTest.addBug_Should_Add_Bug_When_Is_Not_In_The_List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.telerikacademy.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.telerikacademy.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.telerikacademy.tests.BoardImplTest" />
+      <option name="METHOD_NAME" value="addBug_Should_Add_Bug_When_Is_Not_In_The_List" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.telerikacademy.tests in TaskManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaskManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.telerikacademy.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.telerikacademy.tests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Startup" />
+        <item itemvalue="JUnit.com.telerikacademy.tests in TaskManager" />
+        <item itemvalue="JUnit.BoardImplTest" />
+        <item itemvalue="JUnit.BoardImplTest.addBug_Should_Add_Bug_When_Is_Not_In_The_List" />
+        <item itemvalue="JUnit.BoardImplTest.addBug_ShouldThrow_Exception_When_Bug_Is_In_The_List" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0adbab6-ad9d-408f-add0-a29f815e0bef" name="Changes" comment="" />
+      <created>1672320317462</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672320317462</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Implement CreateBugImplCommand">
+      <created>1672337094719</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672337094719</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implement MemberImpl">
+      <created>1672420720272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672420720272</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Additional changes in MemberImpl">
+      <created>1672434927330</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672434927331</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add changeStatus() functionality in BugImpl and BugImplTest">
+      <created>1672478427091</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672478427091</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add changeSeverity and changePriority() functionality in BugImpl and BugImplTest">
+      <created>1672572119491</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672572119491</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implementation of CreateTeam">
+      <created>1672592863608</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672592863608</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement CommentImplTest.">
+      <created>1672639790929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672639790929</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implement CreateFeedback command.">
+      <created>1672648689232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672648689232</updated>
+    </task>
+    <task id="LOCAL-00009" summary="TestUtilities class and additions to BoardImplTest">
+      <created>1672934466212</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672934466212</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implement CreateBugImplCommand" />
+    <MESSAGE value="Implement MemberImpl" />
+    <MESSAGE value="Additional changes in MemberImpl" />
+    <MESSAGE value="Add changeStatus() functionality in BugImpl and BugImplTest" />
+    <MESSAGE value="Add changeSeverity and changePriority() functionality in BugImpl and BugImplTest" />
+    <MESSAGE value="Implementation of CreateTeam" />
+    <MESSAGE value="Implement CommentImplTest." />
+    <MESSAGE value="Implement CreateFeedback command." />
+    <MESSAGE value="TestUtilities class and additions to BoardImplTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestUtilities class and additions to BoardImplTest" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/telerikacademy/core/TaskManagementEngineImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Startup.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TaskManagment$com_telerikacademy_in_TaskManager.ic" NAME="com.telerikacademy in TaskManager Coverage Results" MODIFIED="1672639106366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.telerikacademy.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TaskManagment$BoardImplTest.ic" NAME="BoardImplTest Coverage Results" MODIFIED="1672938868879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.telerikacademy.tests.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TaskManagment$com_telerikacademy_tests_in_TaskManager.ic" NAME="com.telerikacademy.tests in TaskManager Coverage Results" MODIFIED="1672938882053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.telerikacademy.tests.*</FILTER>
+    </SUITE>
+  </component>
+</project>

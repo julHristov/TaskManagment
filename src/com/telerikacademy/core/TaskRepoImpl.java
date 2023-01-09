@@ -1,7 +1,10 @@
 package com.telerikacademy.core;
 
 import com.telerikacademy.core.contracts.TaskRepo;
+import com.telerikacademy.models.BoardImpl;
+import com.telerikacademy.models.MemberImpl;
 import com.telerikacademy.models.TeamImpl;
+import com.telerikacademy.models.contracts.Board;
 import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
@@ -18,7 +21,7 @@ public class TaskRepoImpl implements TaskRepo {
 
   private final List<Task> tasks;
 
-  private final List<Team> teams ;
+  private final List<Team> teams;
   private final List<Member> members;
 
   public TaskRepoImpl() {
@@ -36,13 +39,15 @@ public class TaskRepoImpl implements TaskRepo {
   public List<Task> getTasks() {
     return new ArrayList<>(tasks);
   }
+
   @Override
   public List<Member> getMembers() {
     return new ArrayList<>(members);
   }
+
   @Override
   public void createBug(int id, String taskTitle, String description, Priority priority,
-                         Severity severity, List<String> steps) {
+                        Severity severity, List<String> steps) {
     Task task = new BugImpl(++nextId, taskTitle, description, priority, severity, steps);
     this.tasks.add(task);
   }
@@ -50,8 +55,8 @@ public class TaskRepoImpl implements TaskRepo {
   @Override
   public boolean taskExists(String taskName) {
     boolean exists = false;
-    for (Task task : getTasks()){
-      if(task.getTitle().equalsIgnoreCase(taskName)){
+    for (Task task : getTasks()) {
+      if (task.getTitle().equalsIgnoreCase(taskName)) {
         exists = true;
         break;
       }
@@ -72,5 +77,20 @@ public class TaskRepoImpl implements TaskRepo {
   @Override
   public void addFeedback(FeedbackImpl feedbackToAdd) {
 
+  }
+
+  @Override
+  public Board createBoard(String name) {
+    return new BoardImpl(name);
+  }
+
+  @Override
+  public Team createTeam(String name) {
+    return new TeamImpl(name);
+  }
+
+  @Override
+  public Member createPerson(String name) {
+    return new MemberImpl(name);
   }
 }

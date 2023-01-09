@@ -1,7 +1,10 @@
 package com.telerikacademy.core;
 
+import com.telerikacademy.commands.create.CreateBoardInTeam;
 import com.telerikacademy.commands.create.CreateBugImplCommand;
 import com.telerikacademy.commands.contracts.Command;
+import com.telerikacademy.commands.create.CreatePerson;
+import com.telerikacademy.commands.create.CreateTeam;
 import com.telerikacademy.commands.enums.CommandType;
 import com.telerikacademy.core.contracts.CommandFactory;
 import static com.telerikacademy.utils.ParsingHelpers.*;
@@ -16,11 +19,11 @@ public class CommandFactoryImpl implements CommandFactory {
            //TODO
             switch (commandType){
                 case CREATEPERSON:
-                    return null;
+                    return new CreatePerson(taskRepo);
                 case CREATEFEEDBACK:
                     return null;
                 case CREATEBOARDINTEAM:
-                    return null;
+                    return new CreateBoardInTeam(taskRepo);
                 case CREATEBUG:
                     return null;
                 case CREATEBUGINBOARD:
@@ -30,7 +33,7 @@ public class CommandFactoryImpl implements CommandFactory {
                 case CREATESTORYINBOARD:
                     return null;
                 case CREATETEAM:
-                    return null;
+                    return new CreateTeam(taskRepo);
                 case ADDCOMMENTTOTASK:
                     return null;
                 case ADDPERSONTOTEAM:

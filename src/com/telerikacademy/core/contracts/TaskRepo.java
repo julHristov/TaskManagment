@@ -1,6 +1,7 @@
 package com.telerikacademy.core.contracts;
 
 import com.telerikacademy.models.TeamImpl;
+import com.telerikacademy.models.contracts.Board;
 import com.telerikacademy.models.contracts.Member;
 import com.telerikacademy.models.contracts.Team;
 import com.telerikacademy.models.enums.Priority;
@@ -25,7 +26,8 @@ public interface TaskRepo {
     void addTeam(TeamImpl teamToAdd);
 
     void addFeedback(FeedbackImpl feedbackToAdd);
-
-
+    Board createBoard(String name);
+    Team createTeam(String name);
+    Member createPerson(String name);
 
 }
